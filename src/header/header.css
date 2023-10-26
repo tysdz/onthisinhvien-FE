@@ -1,0 +1,136 @@
+.navbar{
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    z-index: 100;
+    position: sticky;
+    margin-top: 0;
+    transition: .5s;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    background-color: #f2f6fc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-main{
+    display: flex!important;
+    justify-content: space-between;
+    align-items: center;
+    height: 66px;
+    width:100%;
+    z-index: 10000;
+}
+
+.left-header{
+    float: left;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 60px;
+}
+
+.left-header img {
+    margin-right: 15px; 
+    margin-left: 50px;
+}
+
+.small-image {
+    width: 50px;
+    height: 50px;
+}
+
+
+.right-header{
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+
+.right-header a {
+    text-decoration: none; 
+    margin-right: 12px; 
+    color: #000000;
+    font-weight: bold;
+}
+
+.right-header .course {
+    background-color: #f2f6fc; 
+    color: #ff0000; 
+    border: none; 
+    margin-right: 9px;
+    font-weight: bold;
+    margin-bottom: 16px; 
+}
+
+.course .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; 
+    z-index: 1;
+    width: 250px;
+    border: 1px solid #000000; 
+    padding: 10px; 
+    right: 0; 
+    top: 45px;
+    margin-right: 200px;
+    border-radius: 5px;
+    list-style: none; 
+  }
+.dropdown-content a{
+    margin-left: 10px;
+    font-size: 12px;
+  }
+.course.open .dropdown-content {
+    display: block; 
+  }
+
+.right-header .dropdown-label1 {
+    background-color: #f2f6fc;
+    color:rgb(0, 0, 0);
+    height: 50px;
+    border:none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.right-header .login {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px 12px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.cart{
+    width: 40px;
+    margin-left: 12px;
+    display: flex;
+}
+
+.right-header .register {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px 12px; 
+    border:1px solid #000000;
+    cursor: pointer;
+    margin-right: 50px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.login:hover{
+    background-color: #003f72;
+    color: #fff;
+}
+
+.register:hover{
+    background-color: #003f72;
+    color: #fff;
+}

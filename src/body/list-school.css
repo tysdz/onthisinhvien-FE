@@ -1,0 +1,111 @@
+.catogery{
+    background-color: rgb(242, 242, 242);
+    width: 100%;
+}
+
+.catogery1 {
+    width: 80%;
+    margin: 0 auto;
+}
+/*css for top*/
+.top{
+    text-align: center;
+}
+
+.top1{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(32, 32, 116);
+}
+
+.top2{
+    font-size: 15px;
+}
+
+.search {
+    text-align: center;
+}
+
+input{
+    width: 450px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    text-indent: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder{
+    text-indent: 20px;
+}
+/*css for list*/
+.list{
+    display: flex;
+    align-content: center;
+    margin-top: 10px;
+}
+.column{
+    width: 25%;
+    background-color: rgb(242, 242, 242);
+    height: 500px;
+    align-content: center;
+}
+.school{
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    height: 110px;
+    border-radius: 10px;
+    margin: 12px auto 0 auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+.school:hover {
+    transform: translateY(-5px); 
+    background-color: red; 
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    color:rgb(255, 255, 255) ;
+}
+.school:hover .show-more{
+    color:white;
+    background-color: red;
+}
+.name-school{
+    display: flex;
+    align-content: center;
+}
+.name{
+    font-size: 12px;
+    margin-top: 12px;
+}
+.name p{
+    padding: 0px;
+    margin:auto;
+    font-weight: bold;
+}
+.name-school img{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 10px;    
+}
+.information{
+    display: flex;
+    height: 40px;
+    color:rgb(181, 181, 181);
+}
+.course{
+    margin: 20px auto auto 15px;
+    font-size: 10px;
+}
+.show-more{
+    margin-right: 10px;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px;
+    font-size: 11px;
+    margin-top: 12px;
+    font-style: italic;
+}
