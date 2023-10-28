@@ -111,6 +111,7 @@
 .cart{
     width: 40px;
     margin-left: 12px;
+    margin-right: 12px;
     display: flex;
 }
 
@@ -133,4 +134,7 @@
 .register:hover{
     background-color: #003f72;
     color: #fff;
+}
+.right-header:hover a{
+    color:red;
 }

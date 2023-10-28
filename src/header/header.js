@@ -45,7 +45,7 @@ function Header() {
           </div>
           <a href="/kich-hoat">Kích hoạt</a>
           <div className="cart">
-            <img src="https://onthisinhvien.com/gio-hang"></img>
+            <img src="https://onthisinhvien.com/images/icon/otsv/cart.svg"></img>
           </div>
           <button className="login">Đăng nhập</button>
           <button className="register">Đăng xuất</button>

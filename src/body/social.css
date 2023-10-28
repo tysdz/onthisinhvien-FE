@@ -1,0 +1,172 @@
+.wrapper{
+    background-image: url('https://vtv1.mediacdn.vn/thumb_w/640/562122370168008704/2023/8/8/an-do-han-che-nhap-khau-may-tinh-16915122931651485976874.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.wrapper-social {
+    width: 900px;
+    height: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.w-title{
+    width: 60%;
+}
+
+.title {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.title span {
+    color: red;
+}
+
+.title span{
+    color: red;
+}
+.description{
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.youtube-tiktok{
+    display: flex;
+    height: 300px;
+}
+.youtube{
+    width: 300px;
+    height: 270px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 30px;
+}
+
+.youtube img{
+    margin-top: 50px;
+    height: 60px;
+}
+.number{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.item a{
+    width: 170px;
+    height: 50px;
+    background-color: rgb(168, 0, 0);
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.item a:hover{
+    transform: translateY(-10px);
+}
+.Sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    background-color: rgb(233, 60, 60);
+    border-radius: 20px; 
+}
+
+.text {
+    color: white; 
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*Tổng hợp 5 task*/
+.vision {
+    height: 600px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(0, 22, 62);
+}
+
+.box-button {
+    width: 95%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.button-vision {
+    height: 90%;
+    margin-left: 13px;
+    margin-right: 13px;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    background-color: white;
+}
+.button-vision:active{
+    color: red;
+}
+
+.div-button{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+}
+
+.div-button img,
+.div-button a {
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 20px;
+}
+.button-item{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 10px;
+}
+.button-item img{
+    margin-bottom: 55px;
+}
+.item-main{
+    font-weight: bold;
+}
+.item-des{
+    text-align: left;
+    margin-left: 15px;
+    font-size: 17px;
+}
