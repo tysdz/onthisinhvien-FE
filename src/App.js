@@ -7,6 +7,7 @@ import ListSchool from "./body/list-school.js";
 import Reason from "./body/reason.js";
 import Social from "./body/social.js";
 import Activity from "./body/activity";
+import Footer from "./footer/footer";
 
 function App() {
   const slides = [
@@ -43,6 +44,7 @@ function App() {
       <div>
         <Activity/>
       </div>
+      <Footer/>
     </Fragment>
   );
 }

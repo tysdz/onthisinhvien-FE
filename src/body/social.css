@@ -133,6 +133,7 @@
     font-size: large;
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 .button-vision:active{
     color: red;

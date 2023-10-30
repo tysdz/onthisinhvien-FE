@@ -40,6 +40,9 @@ function Activity() {
                 </div>
             </div>   
         </div>
+        <div className="showMore">
+            <button>Xem thêm</button>
+        </div>
        </div> 
     )
 }

@@ -1,0 +1,51 @@
+.footer-panel {
+    width: 100%;
+    height: 450px;
+    background-color: rgb(192, 192, 192);
+  }
+  
+.footer-1 {
+    height: 80%;
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(0, 22, 62);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.infor-footer{
+    display: flex;
+}
+.infor{
+    height: 80%;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.infor p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.infor-footer a{
+    display: block;
+    text-align: left;
+}
+
+.connect-ft img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    height: 20%;
+    background-color: rgb(66, 72, 153);
+}
