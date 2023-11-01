@@ -1,0 +1,181 @@
+
+
+
+
+
+.header-category{
+    width: 100%;
+    height: 60px;
+    margin-top: 15px;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+}
+
+.nameSchool{
+    width: 100%;
+    height: 60px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 25px;
+    color: red;
+    display: flex;
+    align-items: center;
+}
+.nameSchool img{
+    width: 35px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.search-course{
+    display: flex;
+    align-items: center;
+}
+.search-course input{
+    margin-left: 30px;
+    border-radius: 10px;
+    width: 320px;
+    height: 32px;
+}
+.search-course button{
+    width: 125px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+}
+
+.combo-course{
+    margin-bottom: 40px;
+}
+.block-category{
+    margin-bottom: 20px;
+    height: 800px;
+
+}
+.name-cate{
+    font-weight: bold;
+    color:rgb(0, 0, 45);
+    font-size: 22px;
+}
+.grid-cate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.box-course{
+    width: calc(25% - 10px); /* 50% chiều rộng (2 div trong 1 hàng), có khoảng cách giữa chúng */
+    margin-bottom: 10px; /* Khoảng cách giữa các hàng */
+    background-color: #f0f0f0;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.9s;
+    
+}
+.box-course img{
+    width: 100%;
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+/* độ nút trong ảnh */
+.box-img{
+    position: relative;
+  overflow: hidden;
+}
+.box-img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .box-img:hover .overlay {
+    opacity: 1;
+  }
+  
+  .box-img .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .box-img .button1 {
+    background-color: #ffffff00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  } 
+  .box-img .button2 {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  } 
+
+/*  */
+.box-course:hover img{
+    transform: scale(1.1);
+}
+.box-course .box-img{
+    overflow: hidden;
+}
+.name-course{
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 17px;
+}
+.description-course{
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.course-footer{
+    margin: auto 10px 10px 10px;
+    display: flex;
+}
+.number-member{
+    width: 60%;
+    align-items: center;
+    display: flex;
+}
+.course-price{
+    float: right;
+}
+
+.course-price button{
+    width: 100px;
+    height: 34px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+}
+.cate-showmore{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    float:right;
+}
+.cate-showmore button{
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+

@@ -61,6 +61,11 @@ input::placeholder{
     transition: all 0.3s;
     cursor: pointer;
 }
+
+.school p{
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+    color: inherit; /* Kế thừa màu sắc từ phần tử cha */
+  }
 .school:hover {
     transform: translateY(-5px); 
     background-color: red; 

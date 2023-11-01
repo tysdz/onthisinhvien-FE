@@ -21,15 +21,14 @@ const Slider = ({ slides }) => {
   };
   
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 2000); // Chuyển slide mỗi 3 giây
+    const slideInterval = setInterval(nextSlide, 2000); 
 
     return () => {
-      clearInterval(slideInterval); // Xóa interval khi component unmount
+      clearInterval(slideInterval); 
     };
   }, [currentIndex]);
 
   return (
-    //<div>
       <div className="slider">
       <div className="slide" style={slideStylesWidthBackground}></div>
       <div className="dots-container">

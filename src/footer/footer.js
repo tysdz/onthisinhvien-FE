@@ -37,6 +37,7 @@ function Footer() {
                     <a>Shopee VPP</a>
                     <a>Shopee TMU, HVTC</a>
                     <a>Shopee HUCE</a>
+                    <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fshoppe.png&w=128&q=75" className="shopee"></img>
                 </div>
                 <div class="infor">
                     <p>TẢI APP</p>

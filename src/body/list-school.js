@@ -2,6 +2,10 @@ import React from "react";
 import "./list-school.css";
 
 function ListSchool() {
+    const handleSchoolClick = () => {
+        window.location.href = "/NEU"; 
+      };
+
     return(
        <div className="catogery">
         <div className="catogery1">
@@ -16,7 +20,7 @@ function ListSchool() {
             </div>
             <div className="list">
                 <div className="column">
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -29,7 +33,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -42,7 +46,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -55,7 +59,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -72,7 +76,7 @@ function ListSchool() {
 
 
                 <div className="column">
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -85,7 +89,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -98,7 +102,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -111,62 +115,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
-                        <div className="name-school">
-                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
-                            <div className="name">
-                                <p>NEU</p>
-                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
-                            </div>
-                        </div>
-                        <div className="information">
-                            <div className="course">Khoá học</div>
-                            <button className="show-more">Xem thêm</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="column">
-                    <div className="school">
-                        <div className="name-school">
-                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
-                            <div className="name">
-                                <p>NEU</p>
-                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
-                            </div>
-                        </div>
-                        <div className="information">
-                            <div className="course">Khoá học</div>
-                            <button className="show-more">Xem thêm</button>
-                        </div>
-                    </div>
-                    <div className="school">
-                        <div className="name-school">
-                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
-                            <div className="name">
-                                <p>NEU</p>
-                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
-                            </div>
-                        </div>
-                        <div className="information">
-                            <div className="course">Khoá học</div>
-                            <button className="show-more">Xem thêm</button>
-                        </div>
-                    </div>
-                    <div className="school">
-                        <div className="name-school">
-                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
-                            <div className="name">
-                                <p>NEU</p>
-                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
-                            </div>
-                        </div>
-                        <div className="information">
-                            <div className="course">Khoá học</div>
-                            <button className="show-more">Xem thêm</button>
-                        </div>
-                    </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -182,7 +131,7 @@ function ListSchool() {
                 </div>
 
                 <div className="column">
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -195,7 +144,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -208,7 +157,7 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
@@ -221,7 +170,62 @@ function ListSchool() {
                             <button className="show-more">Xem thêm</button>
                         </div>
                     </div>
-                    <div className="school">
+                    <div className="school" onClick={handleSchoolClick}>
+                        <div className="name-school">
+                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
+                            <div className="name">
+                                <p>NEU</p>
+                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
+                            </div>
+                        </div>
+                        <div className="information">
+                            <div className="course">Khoá học</div>
+                            <button className="show-more">Xem thêm</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="column">
+                    <div className="school" onClick={handleSchoolClick}>
+                        <div className="name-school">
+                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
+                            <div className="name">
+                                <p>NEU</p>
+                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
+                            </div>
+                        </div>
+                        <div className="information">
+                            <div className="course">Khoá học</div>
+                            <button className="show-more">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div className="school" onClick={handleSchoolClick}>
+                        <div className="name-school">
+                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
+                            <div className="name">
+                                <p>NEU</p>
+                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
+                            </div>
+                        </div>
+                        <div className="information">
+                            <div className="course">Khoá học</div>
+                            <button className="show-more">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div className="school" onClick={handleSchoolClick}>
+                        <div className="name-school">
+                            <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
+                            <div className="name">
+                                <p>NEU</p>
+                                <p>ĐẠI HỌC KINH TẾ QUỐC DÂN</p>
+                            </div>
+                        </div>
+                        <div className="information">
+                            <div className="course">Khoá học</div>
+                            <button className="show-more">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div className="school" onClick={handleSchoolClick}>
                         <div className="name-school">
                             <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png"></img>
                             <div className="name">
