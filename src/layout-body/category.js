@@ -2,8 +2,45 @@ import React, { useState } from "react";
 import "./category.css";
 
 function Category() {
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modal);
+    };
+
+    if(modal) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
+
     return(
        <div className="category-course">
+        {modal && (
+            <div className="modal">
+            <div onClick={toggleModal} className="overlay"></div>
+            <div className="modal-content">
+                <div className="name-modal">NEU EBOOK PLUS PHÁP LUẬT ĐẠI CƯƠNG</div>
+                <div className="img-price">
+                    <img src="https://storage.googleapis.com/onthisinhvien.appspot.com/images/317789103-1652535269607-phapluatdaicuong.jpg"></img>
+                    <div className="price">
+                        <span>40,000 VND</span>
+                        <p>Số bài học: 8</p>
+                        <p>Ngôn ngữ: Tiếng việt</p>
+                    </div>
+                </div>
+                <div className="modal-button">
+                    <div className="add-cart">
+                        <button>THÊM VÀO GIỎ HÀNG</button>
+                    </div>
+                    <div className="buy-now">
+                        <button>MUA NGAY</button>
+                    </div>
+                </div>
+                <button className="close-modal" onClick={toggleModal}>X</button>
+            </div>
+            </div>
+        )}
         <div className="header-category">
             <div className="nameSchool">
                 <img src="https://onthisinhvien.com/images/icon/otsv/icon-tag-school.svg">
@@ -27,7 +64,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>

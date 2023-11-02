@@ -27,10 +27,6 @@
     color:rgb(255, 0, 0);
 }
 
-.box:hover .circle{
-    background-color: red;
-}
-
 .small{
     width: 30px;
     height: 30px;
@@ -49,7 +45,7 @@
     font-size: 12px;
 }
 
-.circle{
+.circle {
     width: 65px;
     height: 65px;
     background-color: rgb(191, 212, 247);
@@ -59,4 +55,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    position: relative; /* Để xác định vị trí cho phần tử giả */
+  }
+  
+  .circle:hover::before {
+    transform: scale(1, 1); /* Hiển thị bóng khi di chuột qua */
+    pointer-events: none; /* Không tương tác với phần tử giả */
+    z-index: -1; /* Đặt phần tử giả xuống phía sau */
+  }
+  
+  .circle::before {
+    content: ""; /* Để tạo một phần tử giả */
+    width: 65px;
+    height: 65px; /* Điều này tạo ra phần bóng ở dưới */
+    background: rgb(255, 164, 164); /* Màu bóng và độ trong suốt */
+    position: absolute;
+    top: 5px; /* Đặt bottom về 0 để bóng bám sát .circle */
+    left: 5px; /* Đặt left về 0 để bóng bám sát .circle */
+    border-radius: 50%; /* Biến đổi thành hình tròn */
+    transform: scale(1, 0); /* Điểm khởi đầu để ẩn bóng */
+    transition: transform 0.1s; /* Hiệu ứng khi di chuột qua */
+    z-index: -1; /* Đặt phần tử giả xuống phía sau */
+  }
+  
+  .box:hover .circle {
+    background-color: red;
+  }
+  
