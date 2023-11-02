@@ -13,6 +13,7 @@ function Category() {
     } else {
         document.body.classList.remove('active-modal')
     }
+    // 5678987656789
 
     return(
        <div className="category-course">
@@ -31,7 +32,7 @@ function Category() {
                 </div>
                 <div className="modal-button">
                     <div className="add-cart">
-                        <button>THÊM VÀO GIỎ HÀNG</button>
+                        <button id="add">THÊM VÀO GIỎ HÀNG</button>
                     </div>
                     <div className="buy-now">
                         <button>MUA NGAY</button>
@@ -90,7 +91,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -115,7 +116,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -140,7 +141,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -165,7 +166,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -190,7 +191,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -215,7 +216,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -240,7 +241,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -277,7 +278,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -303,7 +304,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -328,7 +329,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -353,7 +354,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -378,7 +379,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -403,7 +404,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -428,7 +429,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -453,7 +454,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -489,7 +490,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -515,7 +516,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -540,7 +541,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -565,7 +566,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -590,7 +591,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -615,7 +616,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -640,7 +641,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -665,7 +666,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -701,7 +702,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -727,7 +728,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -752,7 +753,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -777,7 +778,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -802,7 +803,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -827,7 +828,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -852,7 +853,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>
@@ -877,7 +878,7 @@ function Category() {
                             <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F543778860-1652533318725-triethocmac-lenin.jpg&w=1920&q=75"></img>
                             <div class="overlay">
                                 <div class="button-container">
-                                    <button class="button1">Xem nhanh</button>
+                                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
                                     <button class="button2">Mua Ngay</button>
                                 </div>
                                 </div>

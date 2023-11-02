@@ -290,6 +290,7 @@
     border: none;
     font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
 }
 .buy-now button{
     background-color: orange;
@@ -297,6 +298,7 @@
     font-size: 18px;
     font-weight: bold;
     color: white;
+    cursor: pointer;
 }
 
 

@@ -114,6 +114,20 @@
     margin-right: 12px;
     display: flex;
 }
+.output-cart{
+    top:1px;
+    right: 1px;
+    background-color: red;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center ;
+}
 
 .right-header .register {
     background-color: #ffffff;
