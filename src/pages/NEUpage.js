@@ -5,7 +5,7 @@ import Category from "../layout-body/category";
 import Feedback from "../layout-body/feedback";
 import Community from "../layout-body/community";
 
-function NEUPage(){
+function NEUPage({ increaseCount }){
     return(
         <Fragment>
             <div className="container-neu">
@@ -13,7 +13,7 @@ function NEUPage(){
                     <Banner />
                 </div>
                 <div>
-                    <Category />
+                    <Category increaseCount={increaseCount}/>
                 </div>
                 <div>
                     <Feedback />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './header.css';
 
-function Header() {
+function Header({ count }) {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -46,7 +46,7 @@ function Header() {
           <a href="/kich-hoat">Kích hoạt</a>
           <div className="cart">
             <img src="https://onthisinhvien.com/images/icon/otsv/cart.svg"></img>
-            <div class="output-cart" id="output"></div>
+            <div class="output-cart" id="output">{ count }</div>
           </div>
           <button className="login">Đăng nhập</button>
           <button className="register">Đăng xuất</button>

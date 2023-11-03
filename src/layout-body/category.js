@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./category.css";
 
-function Category() {
+function Category({ increaseCount }) {
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
@@ -14,6 +14,10 @@ function Category() {
         document.body.classList.remove('active-modal')
     }
     // 5678987656789
+    const handleButtonClick = () => {
+        increaseCount();
+      };
+    
 
     return(
        <div className="category-course">
@@ -32,7 +36,7 @@ function Category() {
                 </div>
                 <div className="modal-button">
                     <div className="add-cart">
-                        <button id="add">THÊM VÀO GIỎ HÀNG</button>
+                        <button id="add" onClick={handleButtonClick}>THÊM VÀO GIỎ HÀNG</button>
                     </div>
                     <div className="buy-now">
                         <button>MUA NGAY</button>
