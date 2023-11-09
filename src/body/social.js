@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./social.css";
 
 function Social(){
-            const [activeDiv, setActiveDiv] = useState("tam-nhin"); 
+        const [activeDiv, setActiveDiv] = useState("tam-nhin"); 
         const toggleDiv = (buttonId) => {
             setActiveDiv(buttonId); 
         };

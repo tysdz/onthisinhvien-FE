@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './header.css';
+import { useSelector } from 'react-redux';
 
-function Header({ count }) {
+function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -11,6 +12,7 @@ function Header({ count }) {
   const handleMouseLeave = () => {
     setDropdownOpen(false);
   };
+  const cartCount = useSelector(state => state.cartCount);
 
   return (
     <div className="navbar">
@@ -46,7 +48,7 @@ function Header({ count }) {
           <a href="/kich-hoat">Kích hoạt</a>
           <div className="cart">
             <img src="https://onthisinhvien.com/images/icon/otsv/cart.svg"></img>
-            <div class="output-cart" id="output">{ count }</div>
+            <div class="output-cart" id="output">{cartCount}</div>
           </div>
           <button className="login">Đăng nhập</button>
           <button className="register">Đăng xuất</button>

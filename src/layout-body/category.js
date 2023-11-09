@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./category.css";
+import { useDispatch } from 'react-redux';
 
-function Category({ increaseCount }) {
+function Category() {
+    const dispatch = useDispatch();
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
@@ -14,8 +16,8 @@ function Category({ increaseCount }) {
         document.body.classList.remove('active-modal')
     }
     // 5678987656789
-    const handleButtonClick = () => {
-        increaseCount();
+    const addToCart = () => {
+        dispatch({ type: 'INCREMENT_CART' });
       };
     
 
@@ -36,7 +38,7 @@ function Category({ increaseCount }) {
                 </div>
                 <div className="modal-button">
                     <div className="add-cart">
-                        <button id="add" onClick={handleButtonClick}>THÊM VÀO GIỎ HÀNG</button>
+                        <button id="add" onClick={addToCart}>THÊM VÀO GIỎ HÀNG</button>
                     </div>
                     <div className="buy-now">
                         <button>MUA NGAY</button>
