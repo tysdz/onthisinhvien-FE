@@ -135,10 +135,18 @@ function Social(){
                                         <div>Năm 2021, Tận dụng cơ hội phát triển thương hiệu và vươn lên trở thành chuyên nghiệp</div>
                                     </div>
                                 </div>
-                        </div>
-                        <div id="div-van-hoa" className="div-button">
-                            <a>Bằng nỗ lực sáng tạo nội dung, công nghệ và đổi mới trong quản trị, ÔN THI SINH VIÊN mong muốn trở thành công ty có phần mềm luyện thi được sinh viên sử dụng phổ biến nhất trong nước.</a>
-                        </div>
+                                </div>
+                                <div id="div-van-hoa" className="div-button">
+                                <div className="vid-container1">
+                                    <div className="panel-ifame1">
+                                        <iframe
+                                        width={'60%'}
+                                        height={491}
+                                        src="https://www.youtube.com/embed/NNYzsy1HFZY"
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
                     </div>
                 </div>
 

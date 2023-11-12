@@ -269,8 +269,10 @@ function Category() {
                     </div>
 
                 </div>
-                <div className="cate-showmore">
+                <div className="category-showmore">
+                    <div className="cate-showmore">
                     <button>Xem thêm</button>
+                </div>
                 </div>
             </div>
             {/* mujc 2 */}
@@ -482,8 +484,10 @@ function Category() {
                     </div>
 
                 </div>
-                <div className="cate-showmore">
+                <div className="category-showmore">
+                    <div className="cate-showmore">
                     <button>Xem thêm</button>
+                </div>
                 </div>
             </div>
             <div className="block-category">
@@ -694,8 +698,10 @@ function Category() {
                     </div>
 
                 </div>
-                <div className="cate-showmore">
+                <div className="category-showmore">
+                    <div className="cate-showmore">
                     <button>Xem thêm</button>
+                </div>
                 </div>
             </div>
             <div className="block-category">
@@ -906,8 +912,10 @@ function Category() {
                     </div>
 
                 </div>
-                <div className="cate-showmore">
+                <div className="category-showmore">
+                    <div className="cate-showmore">
                     <button>Xem thêm</button>
+                </div>
                 </div>
             </div>
         </div>

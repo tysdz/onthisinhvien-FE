@@ -42,6 +42,13 @@ function Reason() {
                 <div className="ans">Đừng lo, Khóa luyện có một "Group chat riêng" để hỗ trợ em, giúp em trả lời các câu hỏi, giải đáp các thắc mắc về môn học nhé.</div>
             </div> 
         </div>
+        <div className="vid-container">
+            <div className="panel-ifame">
+                <iframe
+                src="https://www.youtube.com/embed/L1kI-MVZtEY"
+                />
+            </div>
+            </div>
         <div className="feedback">
             <h2>PHẢN HỒI CỦA HỌC VIÊN KỲ TRƯỚC</h2>
             <div className="photo">
@@ -62,6 +69,7 @@ function Reason() {
                     <img src="https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F774990213-1649217469173-tranvan.jpg&w=1920&q=75"></img>
                 </div>
             </div>
+            
             <div className="next-feedback">
                 <div className="list-feedback">1</div>
                 <div className="list-feedback">2</div>

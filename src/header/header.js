@@ -35,7 +35,7 @@ function Header() {
             <button className="dropdown-label1">
               <a className="dropdown-label">Khóa học</a></button>
             <ul className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
-              <li><a href="#">ĐẠI HỌC KINH TẾ QUỐC DÂN</a></li>
+              <li><a href="NEU">ĐẠI HỌC KINH TẾ QUỐC DÂN</a></li>
               <li><a href="#">ĐẠI HỌC XÂY DỰNG</a></li>
               <li><a href="#">ĐẠI HỌC BÁCH KHOA</a></li>
               <li><a href="#">ĐẠI HỌC KINH TẾ THÀNH PHỐ HCM</a></li>
@@ -49,6 +49,9 @@ function Header() {
           <div className="cart">
             <img src="https://onthisinhvien.com/images/icon/otsv/cart.svg"></img>
             <div class="output-cart" id="output">{cartCount}</div>
+          </div>
+          <div className="ba-coc">
+            <img src="https://onthisinhvien.com/images/icon/otsv/cart.svg"></img>
           </div>
           <button className="login">Đăng nhập</button>
           <button className="register">Đăng xuất</button>

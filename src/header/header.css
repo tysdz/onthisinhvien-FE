@@ -31,6 +31,10 @@
     width: 30%;
     height: 60px;
 }
+.left-header p{
+    color: orange;
+    font-weight: bold;
+}
 
 .left-header img {
     margin-right: 15px; 
@@ -114,6 +118,12 @@
     margin-right: 12px;
     display: flex;
 }
+.ba-coc{
+    width: 40px;
+    margin-left: 12px;
+    margin-right: 12px;
+    display: none;
+}
 .output-cart{
     top:1px;
     right: 1px;
@@ -151,4 +161,24 @@
 }
 .right-header:hover a{
     color:red;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1000px) {
+    .right-header a{
+        display: none;
+    }
+    .right-header .cart{
+        display: none;
+    }
+    .right-header .ba-coc{
+        display: block;
+    }
+  }
+
+  @media screen and (max-width:640px) {
+    .left-header p {
+      display: none; 
+    }
 }

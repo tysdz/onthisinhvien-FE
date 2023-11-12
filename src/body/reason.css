@@ -17,8 +17,10 @@
 }
 
 .bottom-reason{
+    background-image: url('https://onthisinhvien.com/images/icon/otsv/why-choose-bg.png');
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .box-reason{
     width: 25%;
@@ -26,6 +28,7 @@
     justify-content: center;
     margin-left:10px;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 .cir-reason {
     width: 80px;
@@ -82,6 +85,7 @@
     border-radius: 30px;
     margin-right: 20px;
     transition: transform 0.2s;
+    flex-wrap: wrap;
 }
 .list-photo:hover{
     transform: scale(1.1);
@@ -134,4 +138,33 @@
     background-color: red;
 }
 
+.vid-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
 
+.panel-ifame{
+    width: 100%;
+}
+
+.vid-container iframe{
+    width: 60%;
+    height: 400px;
+}
+/* responsive */
+@media screen and (max-width:800px) {
+    .box-reason{
+        width: 90%;
+    }
+    .vid-container iframe {
+        width: 90%;
+    }
+    .list-photo{
+        width: 40%;
+    }
+}

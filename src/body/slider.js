@@ -30,18 +30,18 @@ const Slider = ({ slides }) => {
 
   return (
       <div className="slider">
-      <div className="slide" style={slideStylesWidthBackground}></div>
-      <div className="dots-container">
-        {slides.map((slide, slideIndex) => (
-          <div
-          className={`dot ${activeDot === slideIndex ? "active-dot" : ""}`}
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-          >
-            ●
-          </div>
-        ))}
-      </div>
+        <div className="slide" style={slideStylesWidthBackground}></div>
+        <div className="dots-container">
+          {slides.map((slide, slideIndex) => (
+            <div
+            className={`dot ${activeDot === slideIndex ? "active-dot" : ""}`}
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+            >
+              ●
+            </div>
+          ))}
+        </div>
     </div>
     
   );

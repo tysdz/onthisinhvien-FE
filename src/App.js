@@ -7,12 +7,14 @@ import Header from './header/header.js';
 import Footer from './footer/footer.js';
 import HomePage from './pages/HomePage.js';
 import NEUPage from "./pages/NEUpage";
+import ScrollingBar from "./header/ScrollingBar.js";
 
 function App() {
   return (
     <Provider store={store}>
       <Fragment>
         <Header />
+        <ScrollingBar/>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />

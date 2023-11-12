@@ -1,5 +1,5 @@
 .wrapper{
-    background-image: url('https://vtv1.mediacdn.vn/thumb_w/640/562122370168008704/2023/8/8/an-do-han-che-nhap-khau-may-tinh-16915122931651485976874.png');
+    background-image: url('https://storage.googleapis.com/onthisinhvien.appspot.com/images/otsvv/social.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     width: 100%;
@@ -12,7 +12,7 @@
 
 .wrapper-social {
     width: 900px;
-    height: 1000px;
+    
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -50,15 +50,18 @@
 .description{
     font-weight: bold;
     margin-bottom: 40px;
+    color: white;
 }
 .youtube-tiktok{
     display: flex;
     height: 300px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 .youtube{
     width: 300px;
     height: 270px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.645);
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 30px;
@@ -107,12 +110,12 @@
 
 /*Tổng hợp 5 task*/
 .vision {
-    height: 600px;
     width: 100%;
     margin-top: 30px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
+    height: 550px;
     flex-direction: column;
     align-items: center;
     color: rgb(0, 22, 62);
@@ -134,18 +137,21 @@
     border: none;
     background-color: white;
     cursor: pointer;
+    min-height: min-content;
+    background-attachment: red;
 }
 .button-vision:active{
     color: red;
 }
 
 .div-button{
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 400px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: min-content;
+    background-attachment: red;
 }
 
 .div-button img,
@@ -170,4 +176,44 @@
     text-align: left;
     margin-left: 15px;
     font-size: 17px;
+}
+
+.vid-container1 {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+.panel-ifame1{
+    width: 100%;
+}
+
+.vid-container1 iframe{
+    width: 80%;
+    height: 400px;
+}
+
+@media screen and (max-width : 800px) {
+    .title{
+        width: 100%;
+        height: 100px;
+    }
+    .youtube{
+        width: 100%;
+        height: 55%;
+        margin-bottom: 5px;
+    }
+    .youtube img{
+        margin-top: 15px;
+    }
+    .number{
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    .vision{
+        height: 730px;
+    }
 }

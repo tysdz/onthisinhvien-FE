@@ -75,4 +75,10 @@
     background-color: red;
   }
 
+  @media screen and (max-width:800px) {
+    .box-community{
+      width: 100%;
+    }
+  }
+
   

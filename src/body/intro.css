@@ -1,6 +1,7 @@
 .bottom-intro{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; 
 }
 
 .top-intro{
@@ -8,15 +9,19 @@
     width: 100%;
     height: 160px;
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 .top-intro h4{
     text-align: center;
    line-height: 1.5;
    color :rgb(32, 32, 116);
+   font-size: 20px;
 }
 .box{
     transition: all 0.3s;
+    margin-bottom: 10px;
+    
 }
 .box:hover{
     transform: translateY(-5px);
@@ -37,6 +42,7 @@
     justify-content: center;
     font-size: 22px;
     font-weight: bold;
+    color: rgb(32, 32, 116);
 }
 
 .class-count{
@@ -46,8 +52,8 @@
 }
 
 .circle {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     background-color: rgb(191, 212, 247);
     border-radius: 50%;
     margin-left: 30px;
@@ -66,8 +72,8 @@
   
   .circle::before {
     content: ""; /* Để tạo một phần tử giả */
-    width: 65px;
-    height: 65px; /* Điều này tạo ra phần bóng ở dưới */
+    width: 80px;
+    height: 80px; /* Điều này tạo ra phần bóng ở dưới */
     background: rgb(255, 164, 164); /* Màu bóng và độ trong suốt */
     position: absolute;
     top: 5px; /* Đặt bottom về 0 để bóng bám sát .circle */
@@ -80,5 +86,19 @@
   
   .box:hover .circle {
     background-color: red;
+  }
+
+  /* responsive */
+  @media screen and (max-width: 850px) {
+    .box {
+      max-width: 33%; 
+    }
+    .top-intro h4{
+        font-size: 16px;
+    }
+    .top-intro{
+        height: 340px;
+    }
+
   }
   
