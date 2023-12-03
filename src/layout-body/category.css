@@ -98,15 +98,17 @@
 }
 .box-course img{
     width: 100%;
+    height: 100%;
     border-top-left-radius: 5px; 
     border-top-right-radius: 5px;
     z-index: -1;
 }
 /* độ nút trong ảnh */
 .box-img{
+    width: 100%;
     position: relative;
-  overflow: hidden;
-  z-index: 1;
+    overflow: hidden;
+    z-index: 1;
 }
 .box-img .overlay {
     position: absolute;
@@ -222,13 +224,11 @@
 
 .overlay {
     width: 100vw;
-    height: 100vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    position: fixed;
-    
+    position: fixed;   
 }
 .overlay {
     background: rgba(49,49,49,0.8);
@@ -242,10 +242,14 @@
     background-color: #ffffff;
     border-radius: 10px;
     width: 700px;
-    height: 330px;
+    max-height: 660px;
     max-width: 1000px;
     min-width: 300px;
 }
+.scroll-modal {
+    max-height: 400px; 
+    overflow-y: auto; 
+  }
 .close-modal {
     position: absolute;
     top: 10px;
@@ -259,7 +263,6 @@
 .name-modal{
     font-size: 20px;
     font-weight: bold;
-    color: white;
     height: 50px;
     background-color: rgb(255, 86, 86);
     align-items: center;
@@ -267,10 +270,23 @@
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
-.img-price, .modal-button{
+.name-modal a{
+    margin-left: 10px;
+    color: white;
+}
+.img-price{
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
+}
+.more-des h1{
+    margin-left: 10px;
+}
+.modal-button{
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .price{
     margin-top: 10px;
@@ -320,7 +336,10 @@
     color: white;
     cursor: pointer;
 }
-
+.more-des li{
+    margin-right: 15px;
+    font-family: SVN-Poppins!important;
+}
 
 /* reponsive */
 @media screen and (max-width : 900px) and (min-width : 620px) {

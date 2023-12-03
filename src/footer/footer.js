@@ -41,8 +41,10 @@ function Footer() {
                 </div>
                 <div class="infor">
                     <p>TẢI APP</p>
-                    <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fchplay-download.png&w=384&q=75"></img>
-                    <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fapp-store-download.png&w=384&q=75"></img>
+                    <div className="image-container">
+                        <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fchplay-download.png&w=384&q=75"></img>
+                        <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fapp-store-download.png&w=384&q=75"></img>
+                    </div>
                     <a>Kết nối với chúng tôi</a>
                     <div className="connect-ft">
                         <img src="https://onthisinhvien.com/images/icon/otsv/youtube.svg"></img>

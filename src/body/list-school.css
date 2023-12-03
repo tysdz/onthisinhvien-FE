@@ -31,6 +31,9 @@
 .neu{
     color: rgb(182, 182, 182);
 }
+.neu-dis{
+    color: #1c3967;
+}
 input{
     width: 450px;
     height: 45px;
@@ -48,7 +51,7 @@ input::placeholder{
 .list{
     display: flex;
     margin-top: 10px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;    
     margin-top: 40px;
 }
 .box-school{
@@ -90,6 +93,9 @@ input::placeholder{
     color:white;
 }
 .school:hover .neu{
+    color:white;
+}
+.school:hover .neu-dis{
     color:white;
 }
 .name-school{

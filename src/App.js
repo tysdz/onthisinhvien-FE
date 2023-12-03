@@ -8,17 +8,21 @@ import Footer from './footer/footer.js';
 import HomePage from './pages/HomePage.js';
 import NEUPage from "./pages/NEUpage";
 import ScrollingBar from "./header/ScrollingBar.js";
+import CartPage from "./pages/CartPage.js";
 
 function App() {
   return (
     <Provider store={store}>
       <Fragment>
-        <Header />
+        <div className="content">
+          <Header />
+        </div>
         <ScrollingBar/>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/NEU" element={<NEUPage />} />
+            <Route path="/1" element={<NEUPage />} />
+            <Route path="/cart" element={<CartPage />} />
           </Routes>
         </BrowserRouter>
         <Footer />

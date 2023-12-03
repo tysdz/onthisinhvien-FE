@@ -19,8 +19,9 @@
 }
 .infor{
     margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
 }
 .infor p{
     font-size: 18px;
@@ -31,6 +32,15 @@
     text-align: left;
     cursor: pointer;
 }
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-container img {
+    margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa hai hình ảnh */
+  }
 
 .shopee{
     width: 50px;
@@ -61,5 +71,9 @@
     .infor{
         width: 100%;
         margin-top: 1px;
+    }
+    .image-container img{
+        width: 160px;
+        height: auto;
     }
 }
