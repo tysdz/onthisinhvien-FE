@@ -61,7 +61,178 @@
     align-items: center;
     justify-content: center;
 }
-.e-cart-icon img{
+.e-cart-icon1{
     width: 100px;
     height: auto;
+}
+
+.item-in-cart{
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    background-color: #dde6f4;
+    margin-bottom: 60px;
+}
+.all-course-cart{
+    margin-top: 40px;
+}
+.course-cart{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 170px;
+    margin-top: 10px;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.check-box{
+    width: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dde6f4;
+}
+.check-box input{
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.item-id{
+    width: 94%;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.id-img{
+    width: 35%;
+}
+.id-img img{
+    width: 100%;
+    height: 100%;
+}
+.id-des-price{
+    width: 65%;
+    display: flex;
+}
+.id-des{
+    width: 60%;
+}
+.id-description{
+    height: 75%;
+}
+.title-id{
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.short-des{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.date{
+    margin-left: 10px;
+    font-size: 16px;
+}
+.id-price{
+    display: flex;
+    width: 40%;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius: 10px;
+}
+.real-price{
+    font-size: 18px;
+    float:right;
+    width: 75%;
+    margin-top: 10px;
+    text-align: right;
+    margin-right: 10px;
+}
+.remove button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: azure;
+}
+
+.payment{
+    width: 35%;
+    margin-right: 20px;
+    height: 185px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.pay-course{
+    height: 70%;
+}
+.pay-course button{
+    background-color: rgb(248, 110, 110);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    width: 95%;
+    height: 40px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 10px;
+}
+.pay-course label{
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.total-payment1{
+    display: flex;
+    margin-left: 10px;
+    
+}
+.total-payment2{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.select-all{
+    margin-left: 70%;
+}
+.select-all button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(248, 110, 110);
+    margin-top: 10px; 
+}
+.total-payment1 div{
+    width: 50%;
+}
+.total-payment1 span{
+    width: 50%;
+}
+.total-payment2 span{
+    width: 50%;
+}
+.total-payment2 div{
+    width: 50%;
+}
+.total-payment1 div{
+    margin-right: 10px;
+    text-align: right;
+}
+.total-payment2 div{
+    margin-right: 10px;
+    text-align: right;
 }

@@ -286,8 +286,9 @@
 
 import React, { useState, useEffect } from "react";
 import "./category.css";
+import store from "../redux/add.js";
 import { useDispatch } from 'react-redux';
-import coursesData from "./category.json"; // Update the path
+import coursesData from "./category.json"; 
 
 function Category() {
     const dispatch = useDispatch();
@@ -307,6 +308,14 @@ function Category() {
       // Fetch data from the courses.json file
       setCourses(coursesData);
     }, []);
+
+    useEffect(() => {
+      if (selectedCourse && store.getState().cartId.includes(selectedCourse.id)) {
+        const newAddToCartSuccess = { ...addToCartSuccess };
+        newAddToCartSuccess[selectedCourse.id] = true;
+        setAddToCartSuccess(newAddToCartSuccess);
+      }
+    }, [store.getState().cartId, selectedCourse, addToCartSuccess]);
   
     if (modal) {
       document.body.classList.add('active-modal');
@@ -315,12 +324,11 @@ function Category() {
     }
   
     const addToCart = () => {
-      dispatch({ type: 'INCREMENT_CART' });
-
-    const newAddToCartSuccess = { ...addToCartSuccess };
-
-    newAddToCartSuccess[selectedCourse.id] = true;
-    setAddToCartSuccess(newAddToCartSuccess);
+        dispatch({ type: 'INCREMENT_CART', payload: { productId: selectedCourse.id } });
+        const newAddToCartSuccess = { ...addToCartSuccess };
+        
+        newAddToCartSuccess[selectedCourse.id] = true;
+        setAddToCartSuccess(newAddToCartSuccess);
     };
   
     return (

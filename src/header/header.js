@@ -14,6 +14,7 @@ function Header() {
     setDropdownOpen(false);
   };
   const cartCount = useSelector(state => state.cartCount);
+  // const cartId = useSelector(state => state.cartId);
 
   useEffect(() => {
     const handleScroll = () => {
