@@ -289,6 +289,9 @@ import "./category.css";
 import store from "../redux/add.js";
 import { useDispatch } from 'react-redux';
 import coursesData from "./category.json"; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 function Category() {
     const dispatch = useDispatch();
@@ -342,7 +345,10 @@ function Category() {
                 <div className="img-price">
                   <img src={selectedCourse.image} alt={`Image of ${selectedCourse.name}`} />
                   <div className="price">
-                    <span>{selectedCourse.price}</span>
+                    <div >
+                      <FontAwesomeIcon icon={faTag} className="tag"/>
+                      <span>{selectedCourse.price} VND</span>
+                    </div>
                     <p>Số bài học: {selectedCourse.numLessons}</p>
                     <p>Ngôn ngữ: {selectedCourse.language}</p>
                   </div>
@@ -416,7 +422,7 @@ function Category() {
                   <span>{course.reviews} đánh giá</span>
                 </div>
                 <div className="course-price">
-                  <button>{course.price}</button>
+                  <button>{course.price} VND</button>
                 </div>
               </div>
             </div>

@@ -79,7 +79,7 @@ function CartPage(){
                                             <div className="date">Kết thúc :</div>
                                         </div>
                                         <div className="id-price">
-                                            <div className="real-price">{course.price}</div>
+                                            <div className="real-price">{course.price} VND</div>
                                             <div className="remove">
                                                 <button onClick={() => handleRemoveFromCart(course.id)}>X</button>
                                             </div>

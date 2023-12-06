@@ -76,8 +76,13 @@ function Header() {
             <div className="cart" >
               <a href="/cart">
                 <img src="https://onthisinhvien.com/images/icon/otsv/cart.svg"></img>
-              </a> 
-              <div class="output-cart" id="output">{cartCount}</div>
+              </a>
+              {cartCount > 0 ? (
+                <div class="output-cart" id="output">{cartCount}</div>
+              ):(
+                <div></div>
+              )} 
+              
             </div>
             <div className="ba-coc">
             <FaAlignJustify />

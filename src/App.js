@@ -14,9 +14,7 @@ function App() {
   return (
     <Provider store={store}>
       <Fragment>
-        <div className="content">
-          <Header />
-        </div>
+          <Header />        
         <ScrollingBar/>
         <BrowserRouter>
           <Routes>

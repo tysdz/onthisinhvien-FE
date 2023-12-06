@@ -1,5 +1,5 @@
 .scrolling-bar {
-    position: fixed; /* hoặc position: absolute; tùy thuộc vào thiết kế của bạn */
+    position: fixed; 
     bottom: 10px;
     right: 10px;
     height: 35px;
