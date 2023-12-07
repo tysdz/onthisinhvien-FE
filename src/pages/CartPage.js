@@ -11,6 +11,8 @@ function CartPage(){
     const [selectedCourses, setSelectedCourses] = useState([]);
     const cartId = useSelector(state => state.cartId);
     const dispatch = useDispatch();
+    const [showAlert, setShowAlert] = useState(false);
+
 
     useEffect(() => {
         const filteredCourses = coursesData.filter(course => cartId.includes(course.id));
@@ -19,6 +21,10 @@ function CartPage(){
 
     const handleRemoveFromCart = (productId) => {
         dispatch({ type: 'REMOVE_CART', payload: {  productId: productId } });
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 1000);
     };
     
     const chooseTheCourse = (productId) =>{
@@ -38,6 +44,13 @@ function CartPage(){
 
     return(
         <div>
+             {showAlert ?  (
+                <div className="alert">
+                Xóa sản phẩm thành công!
+                </div>
+            ):(
+                <div></div>
+            )}
             {cartId.length <= 0 ? (
             <div>
                 <div className="link-cart">

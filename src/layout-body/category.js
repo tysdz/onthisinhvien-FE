@@ -300,6 +300,7 @@ function Category() {
     const [courses, setCourses] = useState([]);
     const [sections, setSections] = useState([]);
     const [addToCartSuccess, setAddToCartSuccess] = useState({});
+    const [showAlert, setShowAlert] = useState(false);
 
     const toggleModal = (course) => {
       setSelectedCourse(course);
@@ -317,6 +318,7 @@ function Category() {
         const newAddToCartSuccess = { ...addToCartSuccess };
         newAddToCartSuccess[selectedCourse.id] = true;
         setAddToCartSuccess(newAddToCartSuccess);
+
       }
     }, [store.getState().cartId, selectedCourse, addToCartSuccess]);
   
@@ -332,10 +334,22 @@ function Category() {
         
         newAddToCartSuccess[selectedCourse.id] = true;
         setAddToCartSuccess(newAddToCartSuccess);
+
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 1000);
     };
   
     return (
       <div className="category-course">
+        {showAlert ?  (
+        <div className="alert">
+          Thêm vào giỏ hàng thành công!
+        </div>
+      ):(
+        <div></div>
+      )}
         {modal && selectedCourse && (
           <div className="modal">
             <div onClick={() => toggleModal(null)} className="overlay"></div>
