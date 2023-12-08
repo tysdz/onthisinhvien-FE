@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import './HomePage.css'
+import './HomePage.scss'
 import Slider from '../body/slider.js';
 import Intro from '../body/intro.js';
 import ListSchool from "../body/list-school.js";

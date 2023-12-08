@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './CartPage.css';
+import './CartPage.scss';
 import { useSelector,useDispatch } from 'react-redux';
 import coursesData from "../layout-body/category.json"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

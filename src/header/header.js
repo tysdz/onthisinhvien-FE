@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './header.css';
+import './header.scss';
 import { FaAlignJustify } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 

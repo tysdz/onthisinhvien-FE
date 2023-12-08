@@ -1,5 +1,5 @@
 import React from 'react';
-import './ScrollingBar.css'; // Import file CSS nếu cần
+import './ScrollingBar.scss'; // Import file CSS nếu cần
 
 const ScrollingBar = () => {
   return (

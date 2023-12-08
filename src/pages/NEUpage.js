@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import './NEUpage.css'
+import './NEUpage.scss'
 import Banner from "../layout-body/banner";
 import Category from "../layout-body/category";
 import Feedback from "../layout-body/feedback";

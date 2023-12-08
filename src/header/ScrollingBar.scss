@@ -11,11 +11,12 @@
     justify-content: center;
     border-radius: 50px;
     z-index: 98;
+    img{
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin-right: 10px;
+    }
   }
-.scrolling-bar img{
-    width: 20px;
-    height: 20px;
-    float: left;
-    margin-right: 10px;
-}
+
   

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./community.css";
+import "./community.scss";
 
 function Community() {
     return(

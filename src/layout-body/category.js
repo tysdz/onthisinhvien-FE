@@ -285,7 +285,7 @@
 // export default Category;
 
 import React, { useState, useEffect } from "react";
-import "./category.css";
+import "./category.scss";
 import store from "../redux/add.js";
 import { useDispatch } from 'react-redux';
 import coursesData from "./category.json"; 
