@@ -291,7 +291,7 @@
 
 
 import React, { useState } from "react";
-import "./list-school.css";
+import "./list-school.scss";
 import schoolsData from "./list-school.json"; // Update the path
 
 function ListSchool() {

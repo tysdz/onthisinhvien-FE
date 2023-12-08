@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./social.css";
+import "./social.scss";
 
 function Social(){
         const [activeDiv, setActiveDiv] = useState("tam-nhin"); 

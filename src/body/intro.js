@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./intro.css";
+import "./intro.scss";
 
 function Intro() {
     return(
