@@ -297,7 +297,7 @@ import schoolsData from "./list-school.json"; // Update the path
 function ListSchool() {
   const [schools, setSchools] = useState(schoolsData);
 
-  const handleSchoolClick = (schoolId) => {
+  const handleSchoolClick = (schoolId: number) => {
     window.location.href = `/${schoolId}`;
   };
 

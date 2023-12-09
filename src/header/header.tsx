@@ -13,7 +13,7 @@ function Header() {
   const handleMouseLeave = () => {
     setDropdownOpen(false);
   };
-  const cartCount = useSelector(state => state.cartCount);
+  const cartCount = useSelector((state: { cartCount: number }) => state.cartCount);
   // const cartId = useSelector(state => state.cartId);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ function Header() {
                 <img src="https://onthisinhvien.com/images/icon/otsv/cart.svg"></img>
               </a>
               {cartCount > 0 ? (
-                <div class="output-cart" id="output">{cartCount}</div>
+                <div className="output-cart" id="output">{cartCount}</div>
               ):(
                 <div></div>
               )} 

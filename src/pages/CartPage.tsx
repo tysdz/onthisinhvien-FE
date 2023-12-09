@@ -6,40 +6,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 
-function CartPage(){
-    const [coursesInCart, setCoursesInCart] = useState([]);
-    const [selectedCourses, setSelectedCourses] = useState([]);
-    const cartId = useSelector(state => state.cartId);
+interface Course {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    price: string; // Đặt kiểu dữ liệu cho giá là string, bạn có thể sửa lại nếu cần thiết
+  }
+  
+  function CartPage() {
+    const [coursesInCart, setCoursesInCart] = useState<Course[]>([]);
+    const [selectedCourses, setSelectedCourses] = useState<number[]>([]);
+    const cartId = useSelector((state: any) => state.cartId); // Thay đổi kiểu dữ liệu của state
     const dispatch = useDispatch();
     const [showAlert, setShowAlert] = useState(false);
-
-
+  
     useEffect(() => {
-        const filteredCourses = coursesData.filter(course => cartId.includes(course.id));
-        setCoursesInCart(filteredCourses);
+      const filteredCourses = coursesData.filter((course: Course) => cartId.includes(course.id));
+      setCoursesInCart(filteredCourses);
     }, [cartId]);
-
-    const handleRemoveFromCart = (productId) => {
-        dispatch({ type: 'REMOVE_CART', payload: {  productId: productId } });
-        setShowAlert(true);
-        setTimeout(() => {
-          setShowAlert(false);
-        }, 1000);
+  
+    const handleRemoveFromCart = (productId: number) => {
+      dispatch({ type: 'REMOVE_CART', payload: { productId: productId } });
+      setShowAlert(true);
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 1000);
     };
-    
-    const chooseTheCourse = (productId) =>{
-        setSelectedCourses(prevSelectedCourses => {
-            if (prevSelectedCourses.includes(productId)) {
-                return prevSelectedCourses.filter(id => id !== productId);
-            } else {
-                return [...prevSelectedCourses, productId];
-            }
-        });
+  
+    const chooseTheCourse = (productId: number) => {
+      setSelectedCourses((prevSelectedCourses) => {
+        if (prevSelectedCourses.includes(productId)) {
+          return prevSelectedCourses.filter((id) => id !== productId);
+        } else {
+          return [...prevSelectedCourses, productId];
+        }
+      });
     };
+  
     const temporaryAmount = coursesInCart
-    .filter(course => selectedCourses.includes(course.id))
-    .reduce((sum, course) => sum + parseInt(course.price, 10), 0);
-
+      .filter((course) => selectedCourses.includes(course.id))
+      .reduce((sum, course) => sum + parseInt(course.price, 10), 0);
+  
     const totalAmount = temporaryAmount;
 
     return(

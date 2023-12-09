@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import './HomePage.scss'
-import Slider from '../body/slider.js';
-import Intro from '../body/intro.js';
-import ListSchool from "../body/list-school.js";
-import Reason from "../body/reason.js";
-import Social from "../body/social.js";
-import Activity from "../body/activity.js";
+import Slider from '../body/slider';
+import Intro from '../body/intro';
+import ListSchool from "../body/list-school";
+import Reason from "../body/reason";
+import Social from "../body/social";
+import Activity from "../body/activity";
 
 function HomePage() {
   const slides = [

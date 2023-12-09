@@ -286,60 +286,71 @@
 
 import React, { useState, useEffect } from "react";
 import "./category.scss";
-import store from "../redux/add.js";
+import store from "../redux/add";
 import { useDispatch } from 'react-redux';
 import coursesData from "./category.json"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
+interface Course {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  reviews: number;
+  price: string;
+  numLessons: number;
+  language: string;
+  h1des: string;
+  sections: string[];
+}
+
 function Category() {
-    const dispatch = useDispatch();
-    const [modal, setModal] = useState(false);
-    const [selectedCourse, setSelectedCourse] = useState(null);
-    const [courses, setCourses] = useState([]);
-    const [sections, setSections] = useState([]);
-    const [addToCartSuccess, setAddToCartSuccess] = useState({});
-    const [showAlert, setShowAlert] = useState(false);
+  const dispatch = useDispatch();
+  const [modal, setModal] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [sections, setSections] = useState<string[]>([]);
+  const [addToCartSuccess, setAddToCartSuccess] = useState<{ [key: number]: boolean }>({});
+  const [showAlert, setShowAlert] = useState(false);
 
-    const toggleModal = (course) => {
-      setSelectedCourse(course);
-      setSections(course?.sections || []);
-      setModal(!modal);
-    };
-  
-    useEffect(() => {
-      // Fetch data from the courses.json file
-      setCourses(coursesData);
-    }, []);
+  const toggleModal = (course: Course | null) => {
+    setSelectedCourse(course);
+    setSections(course?.sections || []);
+    setModal(!modal);
+  };
 
-    useEffect(() => {
-      if (selectedCourse && store.getState().cartId.includes(selectedCourse.id)) {
-        const newAddToCartSuccess = { ...addToCartSuccess };
-        newAddToCartSuccess[selectedCourse.id] = true;
-        setAddToCartSuccess(newAddToCartSuccess);
+  useEffect(() => {
+    // Fetch data from the courses.json file
+    setCourses(coursesData as Course[]);
+  }, []);
 
-      }
-    }, [store.getState().cartId, selectedCourse, addToCartSuccess]);
-  
-    if (modal) {
-      document.body.classList.add('active-modal');
-    } else {
-      document.body.classList.remove('active-modal');
+  useEffect(() => {
+    if (selectedCourse && store.getState().cartId.includes(selectedCourse.id)) {
+      const newAddToCartSuccess = { ...addToCartSuccess };
+      newAddToCartSuccess[selectedCourse.id] = true;
+      setAddToCartSuccess(newAddToCartSuccess);
     }
-  
-    const addToCart = () => {
-        dispatch({ type: 'INCREMENT_CART', payload: { productId: selectedCourse.id } });
-        const newAddToCartSuccess = { ...addToCartSuccess };
-        
-        newAddToCartSuccess[selectedCourse.id] = true;
-        setAddToCartSuccess(newAddToCartSuccess);
+  }, [store.getState().cartId, selectedCourse, addToCartSuccess]);
 
-        setShowAlert(true);
-        setTimeout(() => {
-          setShowAlert(false);
-        }, 1000);
-    };
+  if (modal) {
+    document.body.classList.add('active-modal');
+  } else {
+    document.body.classList.remove('active-modal');
+  }
+
+  const addToCart = () => {
+    dispatch({ type: 'INCREMENT_CART', payload: { productId: selectedCourse!.id } });
+    const newAddToCartSuccess = { ...addToCartSuccess };
+    newAddToCartSuccess[selectedCourse!.id] = true;
+    setAddToCartSuccess(newAddToCartSuccess);
+
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 1000);
+  };
   
     return (
       <div className="category-course">
@@ -418,10 +429,10 @@ function Category() {
             <div className="box-course" key={course.id}>
               <div className="box-img">
                 <img src={course.image} alt={`Image of ${course.name}`} />
-                <div class="overlay">
-                  <div class="button-container">
-                    <button class="button1" onClick={() => toggleModal(course)}>Xem nhanh</button>
-                    <button class="button2">Mua Ngay</button>
+                <div className="overlay">
+                  <div className="button-container">
+                    <button className="button1" onClick={() => toggleModal(course)}>Xem nhanh</button>
+                    <button className="button2">Mua Ngay</button>
                   </div>
                 </div>
               </div>
@@ -460,10 +471,10 @@ function Category() {
             <div className="box-course" key={course.id}>
               <div className="box-img">
                 <img src={course.image} alt={`Image of ${course.name}`} />
-                <div class="overlay">
-                  <div class="button-container">
-                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
-                    <button class="button2">Mua Ngay</button>
+                <div className="overlay">
+                  <div className="button-container">
+                    <button className="button1" onClick={() => toggleModal(course)}>Xem nhanh</button>  
+                    <button className="button2">Mua Ngay</button>
                   </div>
                 </div>
               </div>
@@ -502,10 +513,10 @@ function Category() {
             <div className="box-course" key={course.id}>
               <div className="box-img">
                 <img src={course.image} alt={`Image of ${course.name}`} />
-                <div class="overlay">
-                  <div class="button-container">
-                    <button class="button1" onClick={toggleModal}>Xem nhanh</button>
-                    <button class="button2">Mua Ngay</button>
+                <div className="overlay">
+                  <div className="button-container">
+                    <button className="button1" onClick={() => toggleModal(course)}>Xem nhanh</button>
+                    <button className="button2">Mua Ngay</button>
                   </div>
                 </div>
               </div>

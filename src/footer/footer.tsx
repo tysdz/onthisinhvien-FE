@@ -6,13 +6,13 @@ function Footer() {
        <div className="footer-panel">
         <div className="footer-1">
             <div className="infor-footer">
-                <div class="infor">
+                <div className="infor">
                     <p>THÔNG TIN</p>
                     <a>Email: info@onthisinhvien.com</a>
                     <a>Hotline: 02473 010 929</a>
                     <a>Giờ làm việc: 8h00 - 11h30,<br/> 14h - 17h30</a>
                 </div>
-                <div class="infor">
+                <div className="infor">
                     <p>TIỆN ÍCH</p>
                     <a>Trang chủ</a>
                     <a>Khóa học</a>
@@ -20,7 +20,7 @@ function Footer() {
                     <a>Đề thi</a>
                     <a>Tin tức</a>
                 </div>
-                <div class="infor">
+                <div className="infor">
                     <p>CHÍNH SÁCH</p>
                     <a>Những câu hỏi thường gặp</a>
                     <a>Bộ quy tắc hành xử của mentor <br/> và học viên trên otsv</a>
@@ -30,7 +30,7 @@ function Footer() {
                     <a>Chính sách hoàn trả học phí</a>
                     <a>Vi phạm chính sách</a>
                 </div>
-                <div class="infor">
+                <div className="infor">
                     <p>HỢP TÁC & LIÊN KẾT</p>
                     <a>Shopee UEH, UEL</a>
                     <a>Shopee NEU</a>
@@ -39,7 +39,7 @@ function Footer() {
                     <a>Shopee HUCE</a>
                     <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fshoppe.png&w=128&q=75" className="shopee"></img>
                 </div>
-                <div class="infor">
+                <div className="infor">
                     <p>TẢI APP</p>
                     <div className="image-container">
                         <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fchplay-download.png&w=384&q=75"></img>

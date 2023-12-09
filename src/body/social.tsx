@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "./social.scss";
 
-function Social(){
-        const [activeDiv, setActiveDiv] = useState("tam-nhin"); 
-        const toggleDiv = (buttonId) => {
-            setActiveDiv(buttonId); 
-        };
-
-        useEffect(() => {
-            const divs = document.querySelectorAll('[id^="div-"]');
-            divs.forEach((div) => {
-            if (div.id === `div-${activeDiv}`) {
-                div.style.display = 'block';
-            } else {
-                div.style.display = 'none';
-            }
-            });
-        }, [activeDiv]);
+function Social() {
+    const [activeDiv, setActiveDiv] = useState("tam-nhin");
+  
+    const toggleDiv = (buttonId: string) => {
+      setActiveDiv(buttonId);
+    };
+  
+    useEffect(() => {
+      const divs = document.querySelectorAll<HTMLElement>('[id^="div-"]');
+      divs.forEach((div) => {
+        if (div.id === `div-${activeDiv}`) {
+          div.style.display = 'block';
+        } else {
+          div.style.display = 'none';
+        }
+      });
+    }, [activeDiv]);
 
     return(
         <div className="wrapper">
