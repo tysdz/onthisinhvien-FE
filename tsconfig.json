@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "jsx": "react",
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
     /* Projects */
     // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
@@ -106,5 +106,7 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.scss", "src/index.tsx", "src/App.test.js"],
+  "exclude": ["node_modules"]
 }
