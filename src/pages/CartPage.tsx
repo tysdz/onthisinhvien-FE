@@ -11,15 +11,16 @@ interface Course {
     name: string;
     description: string;
     image: string;
-    price: string; // Đặt kiểu dữ liệu cho giá là string, bạn có thể sửa lại nếu cần thiết
+    price: string; 
   }
   
   function CartPage() {
     const [coursesInCart, setCoursesInCart] = useState<Course[]>([]);
     const [selectedCourses, setSelectedCourses] = useState<number[]>([]);
-    const cartId = useSelector((state: any) => state.cartId); // Thay đổi kiểu dữ liệu của state
+    const cartId = useSelector((state: any) => state.cartId); 
     const dispatch = useDispatch();
     const [showAlert, setShowAlert] = useState(false);
+    const [selectAll, setSelectAll] = useState(false);
   
     useEffect(() => {
       const filteredCourses = coursesData.filter((course: Course) => cartId.includes(course.id));
@@ -49,6 +50,14 @@ interface Course {
       .reduce((sum, course) => sum + parseInt(course.price, 10), 0);
   
     const totalAmount = temporaryAmount;
+
+
+    const handleSelectAll = () => {
+        setSelectAll((prevSelectAll) => !prevSelectAll);
+        setSelectedCourses((prevSelectedCourses) =>
+          selectAll ? [] : coursesInCart.map((course) => course.id)
+        );
+      };
 
     return(
         <div>
@@ -126,8 +135,12 @@ interface Course {
                             <button>THANH TOÁN</button>
                         </div>
                     </div>
-                    <div className="select-all">
-                        <button>Chọn tất cả</button>
+                    <div className="select-all" >
+                        {selectAll ? (
+                            <button onClick={() => handleSelectAll()}>Bỏ chọn tất cả</button>
+                        ):(
+                            <button onClick={() => handleSelectAll()}>Chọn tất cả</button>
+                        )}
                     </div>
                 </div>
             </div>

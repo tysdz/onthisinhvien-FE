@@ -15,7 +15,6 @@
 //     } else {
 //         document.body.classList.remove('active-modal')
 //     }
-//     // 5678987656789
 //     const addToCart = () => {
 //         dispatch({ type: 'INCREMENT_CART' });
 //       };
