@@ -180,13 +180,15 @@
             }
             label{
                 margin-left: 10px;
-                margin-top: 15px;
-                font-size: 20px;
+                margin-top: 20px;
+                font-size: 16px;
                 font-weight: bold;
             }
             .total-payment1{
                 display: flex;
                 margin-left: 10px;
+                margin-top: 10px;
+                font-size: 15px;
                 div{
                     width: 50%;
                     margin-right: 10px;
@@ -198,7 +200,7 @@
             }
             .total-payment2{
                 @extend .total-payment1;
-                margin-top: 10px;
+                margin-top: 15px;
                 margin-bottom: 10px;
             }
         }

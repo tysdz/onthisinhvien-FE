@@ -301,7 +301,7 @@ interface Course {
   price: string;
   numLessons: number;
   language: string;
-  h1des: string;
+  h1des?: string;
   sections: string[];
 }
 
@@ -312,7 +312,13 @@ function Category() {
   const [courses, setCourses] = useState<Course[]>([]);
   const [sections, setSections] = useState<string[]>([]);
   const [addToCartSuccess, setAddToCartSuccess] = useState<{ [key: number]: boolean }>({});
+  
   const [showAlert, setShowAlert] = useState(false);
+  const [coursesToShow, setCoursesToShow] = useState(4);
+
+  const toggleShowMore = () => {
+    setCoursesToShow(coursesToShow + 4);
+ };
 
   const toggleModal = (course: Course | null) => {
     setSelectedCourse(course);
@@ -424,7 +430,7 @@ function Category() {
           MÔN ĐẠI CƯƠNG (87 KHOÁ)
         </span>
         <div className="grid-cate">
-          {courses.map((course) => (
+         {coursesData.slice(0, coursesToShow).map((course) => (
             <div className="box-course" key={course.id}>
               <div className="box-img">
                 <img src={course.image} alt={`Image of ${course.name}`} />
@@ -453,9 +459,11 @@ function Category() {
           ))}
         </div>
         <div className="category-showmore">
-          <div className="cate-showmore">
-            <button>Xem thêm</button>
-          </div>
+          {coursesToShow < coursesData.length && (
+            <div className="cate-showmore">
+              <button onClick={toggleShowMore}>Xem thêm</button>
+            </div>
+          )}
         </div>
       </div>
     </div>

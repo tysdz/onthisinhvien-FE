@@ -15,10 +15,10 @@ interface Course {
   }
   
   function CartPage() {
+    const dispatch = useDispatch();
     const [coursesInCart, setCoursesInCart] = useState<Course[]>([]);
     const [selectedCourses, setSelectedCourses] = useState<number[]>([]);
     const cartId = useSelector((state: any) => state.cartId); 
-    const dispatch = useDispatch();
     const [showAlert, setShowAlert] = useState(false);
     const [selectAll, setSelectAll] = useState(false);
   
@@ -32,7 +32,7 @@ interface Course {
       setShowAlert(true);
       setTimeout(() => {
         setShowAlert(false);
-      }, 1000);
+      }, 1500);
     };
   
     const chooseTheCourse = (productId: number) => {
@@ -84,7 +84,9 @@ interface Course {
                             <FontAwesomeIcon className="e-cart-icon1" icon={faCartPlus} />
                         </div>
                         <div className="e-cart-item">Bạn chưa có khóa học nào <br /> trong giỏ hàng</div>
-                        <div className="e-cart">Tiếp tục mua sắm</div>
+                        <div className="e-cart" >
+                            <a href='/course'>Tiếp tục mua sắm</a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -136,11 +138,14 @@ interface Course {
                         </div>
                     </div>
                     <div className="select-all" >
-                        {selectAll ? (
+                        {/* {selectAll ? (
                             <button onClick={() => handleSelectAll()}>Bỏ chọn tất cả</button>
                         ):(
                             <button onClick={() => handleSelectAll()}>Chọn tất cả</button>
-                        )}
+                        )} */}
+                        <button onClick={() => handleSelectAll()}>
+                            {selectAll ? 'Bỏ chọn tất cả' : 'Chọn tất cả'}
+                        </button>
                     </div>
                 </div>
             </div>

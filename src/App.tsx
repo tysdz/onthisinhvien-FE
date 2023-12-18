@@ -9,18 +9,20 @@ import HomePage from './pages/HomePage';
 import NEUPage from "./pages/NEUpage";
 import ScrollingBar from "./header/ScrollingBar";
 import CartPage from "./pages/CartPage";
+import CoursePage from "./pages/CoursePage";
 
 function App() {
   return (
     <Provider store={store}>
       <Fragment>
-          <Header />        
+        <Header />        
         <ScrollingBar/>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/1" element={<NEUPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/course" element={<CoursePage />} />
           </Routes>
         </BrowserRouter>
         <Footer />

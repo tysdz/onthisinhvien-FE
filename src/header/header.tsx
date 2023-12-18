@@ -75,7 +75,7 @@ function Header() {
                 onMouseLeave={handleMouseLeave}
               >
               <button className="dropdown-label1">
-                <a className="a2">KHÓA HỌC</a></button>
+                <a className="a2" href='/course'>KHÓA HỌC</a></button>
                 <ul className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
                   <li><a href="NEU">ĐẠI HỌC KINH TẾ QUỐC DÂN</a></li>
                   <li><a href="#">ĐẠI HỌC XÂY DỰNG</a></li>
@@ -111,10 +111,9 @@ function Header() {
               <FaAlignJustify />
               </div>
             <button className="login" onClick={() => toggleModalLogin()}>Đăng nhập</button>
-            <button className="register" onClick={() => toggleModalLogout()}>Đăng xuất</button>
+            <button className="register" onClick={() => toggleModalLogout()}>Đăng ký</button>
           </div>
         </div>
-      </div>
       { modalLogin &&(
         <div className="modalLogin">
         <div onClick={() => toggleModalLogin()} className="overlayLogin"></div>
@@ -168,7 +167,7 @@ function Header() {
         <div onClick={() => toggleModalLogout()} className="overlayLogin"></div>
         <div className="modalLogin-content">
           <div className="name-modal">
-            <h3>Đăng Kí
+            <h3>Đăng Ký
               <button className="close-modalLogin" onClick={() => toggleModalLogout()}>X</button>
             </h3>
             <div className='form-login'>
@@ -185,13 +184,13 @@ function Header() {
                     <div className="input-item">
                       <div>
                           <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Fpassword.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Tài khoản đăng nhập" className='custom-input1'></input>
+                        <input type="text" placeholder="Mật khẩu đăng nhập" className='custom-input1'></input>
                       </div>
                     </div>
                     <div className="input-item">
                       <div>
                           <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Fpassword.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Tài khoản đăng nhập" className='custom-input1'></input>
+                        <input type="text" placeholder="Nhập lại mật khẩu" className='custom-input1'></input>
                       </div>
                     </div>
                   </div>
@@ -201,25 +200,25 @@ function Header() {
                     <div className="input-item">
                       <div>
                           <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Faccount.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Tài khoản đăng nhập" className='custom-input1'></input>
+                        <input type="text" placeholder="Họ và tên" className='custom-input1'></input>
                       </div>
                     </div>
                     <div className="input-item">
                       <div>
                           <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Faccount.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Tài khoản đăng nhập" className='custom-input1'></input>
+                        <input type="text" placeholder="Email" className='custom-input1'></input>
                       </div>
                     </div>
                     <div className="input-item">
                       <div>
                           <img src="https://onthisinhvien.com/images/icon/phone-icon.svg" className="arnh"></img>
-                        <input type="text" placeholder="Tài khoản đăng nhập" className='custom-input1'></input>
+                        <input type="text" placeholder="Số điện thoại" className='custom-input1'></input>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="other-login">
-                  <button className='Login'>Đăng Nhập</button>
+                  <button className='Login'>Đăng ký</button>
                   <div>
                     <span className="or">Hoặc</span>
                   </div>
@@ -235,6 +234,7 @@ function Header() {
         </div>
       </div>
       )}
+      </div>
     </div>
   );
 }

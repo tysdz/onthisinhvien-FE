@@ -1,0 +1,105 @@
+[
+    {
+      "id": 1,
+      "name": "NEU",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/169791473-1646299420168-daihockinhtequocdan.png",
+      "description": "ĐẠI HỌC KINH TẾ QUỐC DÂN"
+    },
+    {
+      "id": 2,
+      "name": "HUCE",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/258008389-1646280981033-daihocxaydung.png",
+      "description": "ĐẠI HỌC XÂY DỰNG"
+    },
+    {
+      "id": 3,
+      "name": "UEH",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/30498790-1590834420684-logo(1).jpg",
+      "description": "ĐẠI HỌC KINH TẾ THÀNH PHỐ HCM"
+    },
+    {
+      "id": 4,
+      "name": "UEL",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/335050581-1646297997776-daihockinhteluathcm.png",
+      "description": "ĐẠI HỌC KINH TẾ - LUẬT HCM"
+    },
+    {
+      "id": 5,
+      "name": "HUB",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/53758198-1650331342559-logohub.png",
+      "description": "ĐẠI HỌC NGÂN HÀNG THÀNH PHỐ HCM"
+    },
+    {
+      "id": 6,
+      "name": "TMU",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/435232271-1647858439448-daihocthuongmai.png",
+      "description": "ĐẠI HỌC THƯƠNG MẠI"
+    },
+    {
+      "id": 7,
+      "name": "HUST",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/222815085-1646299905098-daihocbachkhoahanoi.png",
+      "description": "ĐẠI HỌC BÁCH KHOA HÀ NỘI"
+    },
+    {
+      "id": 8,
+      "name": "TDTU",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/16741081-1649079134281-tdt_logo.png",
+      "description": "ĐẠI HỌC TÔN ĐỨC THẮNG"
+    },
+    {
+      "id": 9,
+      "name": "UFM",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/503622015-1650331824750-logoufm.png",
+      "description": "ĐẠI HỌC TÀI CHÍNH - MAKETING"
+    },
+    {
+      "id": 10,
+      "name": "VinhUNI",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/506704871-1647931975956-dhvinh.png",
+      "description": "ĐẠI HỌC VINH"
+    },
+    {
+      "id": 11,
+      "name": "AOF",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/722165884-1646280993845-hocvientaichinh.png",
+      "description": "HỌC VIỆN TÀI CHÍNH"
+    },
+    {
+      "id": 12,
+      "name": "BA",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/26823064-1647858464142-hocviennganhang.png",
+      "description": "HỌC VIỆN NGÂN HÀNG"
+    },
+    {
+      "id": 13,
+      "name": "TUU",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/987350358-1647931958351-daihoccongdoan.png",
+      "description": "ĐẠI HỌC CÔNG ĐOÀN"
+    },
+    {
+      "id": 14,
+      "name": "HCMUT",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/636939926-1650331677139-logohcmut.jpg",
+      "description": "ĐẠI HỌC BÁCH KHOA THÀNH PHỐ HCM"
+    },
+    {
+      "id": 15,
+      "name": "VNUE",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/254687189-1646299865390-hocviennongnghiepvietnam.png",
+      "description": "HỌC VIỆN NÔNG NGHIỆP"
+    },
+    {
+      "id": 16,
+      "name": "CLC, TT, KSTN, CNTN",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/175933348-1668851782307-logohltroncovien1.png",
+      "description": "CHƯƠNG TRÌNH TIẾNG ANH"
+    },
+    {
+      "id": 17,
+      "name": "",
+      "image": "https://storage.googleapis.com/onthisinhvien.appspot.com/images/175933348-1668851782307-logohltroncovien1.png",
+      "description": "TRƯỜNG KHÁC"
+    }
+  ]
+  
