@@ -86,12 +86,12 @@ function Allcourse() {
     return(
         <div className="all">
             {showAlert ?  (
-        <div className="alert">
-          Thêm vào giỏ hàng thành công!
-        </div>
-      ):(
-        <div></div>
-      )}
+              <div className="alert">
+                Thêm vào giỏ hàng thành công!
+              </div>
+            ):(
+              <div></div>
+            )}
         {modal && selectedCourse && (
           <div className="modal">
             <div onClick={() => toggleModal(null)} className="overlay"></div>
