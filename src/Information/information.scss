@@ -1,0 +1,266 @@
+.information_container{
+    background-color: #f2f6fc;
+    width: 100%;
+    .infor_layout{
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        .layout_left{
+            margin-right: 10px;
+            width: 25%;
+            height: 100%;
+            .main_infor{
+                width: 100%;
+                height: 290px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                background-color: white;
+                box-shadow: 0 4px 30px rgba(95,73,118,.15);
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .profile{
+                    width: 100px;
+                    height: 100px;
+                    background-color: antiquewhite;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    $max-value: 256;
+                    background-color: rgb(
+                    random($max-value),
+                    random($max-value),
+                    random($max-value)
+                    );
+                    font-size: 20px;
+                    font-weight: bolder;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                .name_infor{
+                    font-size: 20px;
+                    font-weight: bolder;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                .email_infor{
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .infor_button{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .show_infor{
+                    height: 40px;
+                    border-radius: 3px;
+                    border: 1px solid currentcolor;
+                    margin-right: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+                .send_email{
+                    @extend .show_infor;
+                }
+            }
+            
+            .overview{
+                @extend .main_infor;
+                height: 600px;
+                margin-top: 0px;
+            }
+        }
+        .layout_right{
+            height: 100%;
+            width: calc(75% - 10px);
+            .near_activity{
+                margin-bottom: 10px;
+                border-radius: 5px;
+                width: 100%;
+                height: 110px;
+                background-color: white;
+                box-shadow: 0 4px 30px rgba(95,73,118,.15);
+                margin-top: 20px;
+                font-size: 20px;
+                font-weight: bolder;
+                img{
+                    margin: 5px 5px 0px 5px;
+                }
+                
+            }
+            .online_time{
+                @extend .near_activity;
+                height: 450px;
+                margin-top: 0px;
+            }
+            .near_test{
+                @extend .near_activity;
+                height: 150px;
+                margin-top: 0px;
+            }
+            .progress_course{
+                @extend .near_activity;
+                height: 160px;
+                margin-top: 0px;
+            }
+            
+        }
+    }
+}
+
+.modalInf{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    .overlayInfor {
+        width: 100vw;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed; 
+        background: rgba(49,49,49,0.8);
+    }
+    .modalInf-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1.4;
+        background-color: #ffffff;
+        border-radius: 2px;
+        width: 1000px;
+        max-height: 500px;
+        max-width: 1500px;
+        min-width: 300px;
+        .scroll-modal {
+            max-height: 450px; 
+            overflow-y: auto;
+            display: flex;
+            .img-infor{
+                width: 25%;
+                margin-right: 20px;
+                .main_infor1{
+                    width: 100%;
+                    height: 290px;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    background-color: white;
+                    box-shadow: 0 4px 30px rgba(95,73,118,.15);
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .profile1{
+                        width: 150px;
+                        height: 150px;
+                        background-color: antiquewhite;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        $max-value: 256;
+                        background-color: rgb(
+                        random($max-value),
+                        random($max-value),
+                        random($max-value)
+                        );
+                        font-size: 20px;
+                        font-weight: bolder;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                    }
+                    .name_infor1{
+                        font-size: 20px;
+                        font-weight: bolder;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                    }
+                    .infor_button1{
+                        margin-top: 5px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .show_infor1{
+                        height: 40px;
+                        width: 220px;
+                        border-radius: 10px;
+                        border: 1px solid currentcolor;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgb(235, 255, 222);
+                        span {
+                            margin-left: 10px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+            }
+            .form-inf{
+                width: calc( 75% - 20px );
+                h4{
+                    span{
+                        margin-left: 40%;
+                    }
+                }
+                .all-grid-infor, .changepass{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .grid-infor{
+                        width: calc(50% - 10px);
+                        margin-left: 10px;
+                        margin-top: 10px;
+                        input{
+                            width: 290px;
+                            border-radius: 10px;
+                            border :none;
+                        }
+                        button{
+                            width: 130px;
+                            height: 40px;
+                            background-color: #e10422;
+                            color: white;
+                            margin-left: 60%;
+                            border-radius: 10px;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.close-modalInfor {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 5px 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+

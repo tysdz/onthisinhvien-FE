@@ -3,10 +3,10 @@ import "./all-course.scss";
 import schoolsData from "./list-school.json"; 
 import coursesData from "./list-category.json"; 
 import store from "../redux/add";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag } from "@fortawesome/free-solid-svg-icons";
-
+import { incrementCart } from '../redux/add';
 
 interface Course {
     id: number;
@@ -31,6 +31,8 @@ function Allcourse() {
     const [addToCartSuccess, setAddToCartSuccess] = useState<{ [key: number]: boolean }>({});
     const [showAlert, setShowAlert] = useState(false);
     const dispatch = useDispatch();
+    const cartIds = useSelector((state: any) => state.cart?.cartId || []);
+
 
     const [currentPage, setCurrentPage] = useState(1);
     const coursesPerPage = 12;
@@ -54,16 +56,15 @@ function Allcourse() {
       }
 
       useEffect(() => {
-        if (selectedCourse && store.getState().cartId.includes(selectedCourse.id)) {
+        if (selectedCourse && cartIds.includes(selectedCourse.id)) {
           const newAddToCartSuccess = { ...addToCartSuccess };
           newAddToCartSuccess[selectedCourse.id] = true;
           setAddToCartSuccess(newAddToCartSuccess);
         }
-      }, [store.getState().cartId, selectedCourse, addToCartSuccess]);
+      }, [cartIds, selectedCourse, addToCartSuccess]);
 
       const addToCart = () => {
-        dispatch({ type: 'INCREMENT_CART', payload: { productId: selectedCourse!.id } });
-        const newAddToCartSuccess = { ...addToCartSuccess };
+        dispatch(incrementCart({ productId: selectedCourse!.id }));        const newAddToCartSuccess = { ...addToCartSuccess };
         newAddToCartSuccess[selectedCourse!.id] = true;
         setAddToCartSuccess(newAddToCartSuccess);
     

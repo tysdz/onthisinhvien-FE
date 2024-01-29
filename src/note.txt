@@ -1,0 +1,239 @@
+import { createStore } from 'redux';
+
+interface CartState {
+  cartCount: number;
+  cartId: number[];
+}
+
+interface IncrementCart {
+  type: 'INCREMENT_CART';
+  payload: {
+    productId: number;
+  };
+}
+
+interface RemoveCart {
+  type: 'REMOVE_CART';
+  payload: {
+    productId: number;
+  };
+}
+
+type CartAction = IncrementCart | RemoveCart;
+
+const initialState: CartState = {
+  cartCount: 0,
+  cartId: [],
+};
+
+const cartReducer = (state: CartState = initialState, action: CartAction): CartState => {
+  switch (action.type) {
+    case 'INCREMENT_CART':
+      const newState: CartState = {
+        ...state,
+        cartCount: state.cartCount + 1,
+        cartId: [...state.cartId, action.payload.productId],
+      };
+
+      localStorage.setItem('reduxState', JSON.stringify(newState));
+
+      return newState;
+
+    case 'REMOVE_CART':
+      const updatedState: CartState = {
+        ...state,
+        cartCount: state.cartCount - 1,
+        cartId: state.cartId.filter((id) => id !== action.payload.productId),
+      };
+
+      localStorage.setItem('reduxState', JSON.stringify(updatedState));
+
+      return updatedState;
+
+    default:
+      return state;
+  }
+};
+
+const storedStateString = localStorage.getItem('reduxState');
+const storedState: CartState | undefined = storedStateString ? JSON.parse(storedStateString) : undefined;
+
+
+const store = createStore(cartReducer, storedState);
+
+export default store;
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+interface CartState {
+  cartCount: number;
+  cartId: number[];
+}
+
+interface IncrementCartPayload {
+  productId: number;
+}
+
+interface RemoveCartPayload {
+  productId: number;
+}
+
+const initialState: CartState = {
+  cartCount: 0,
+  cartId: [],
+};
+
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState,
+  reducers: {
+    incrementCart: (state, action: PayloadAction<IncrementCartPayload>) => {
+      state.cartCount++;
+      state.cartId.push(action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+    removeCart: (state, action: PayloadAction<RemoveCartPayload>) => {
+      state.cartCount--;
+      state.cartId = state.cartId.filter((id) => id !== action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+  },
+});
+
+export const { incrementCart, removeCart } = cartSlice.actions;
+
+const storedStateString = localStorage.getItem('reduxState');
+const storedState: CartState | undefined = storedStateString ? JSON.parse(storedStateString) : undefined;
+
+const store = configureStore({
+  reducer: cartSlice.reducer,
+  preloadedState: storedState,
+});
+
+export default store;
+////////////////////////////////////////
+import { configureStore, createSlice } from '@reduxjs/toolkit';
+
+interface CartState {
+  cartCount: number;
+  cartId: number[];
+}
+
+const initialState: CartState = {
+  cartCount: 0,
+  cartId: [],
+};
+
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState,
+  reducers: {
+    incrementCart: (state, action) => {
+      state.cartCount += 1;
+      state.cartId.push(action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+    removeCart: (state, action) => {
+      state.cartCount -= 1;
+      state.cartId = state.cartId.filter((id) => id !== action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+  },
+});
+
+export const { incrementCart, removeCart } = cartSlice.actions;
+
+const storedStateString = localStorage.getItem('reduxState');
+const storedState: CartState | undefined = storedStateString ? JSON.parse(storedStateString) : undefined;
+
+const store = configureStore({
+  reducer: cartSlice.reducer,
+  preloadedState: storedState,
+});
+
+export default store;
+
+###############################
+import { configureStore, combineReducers, createSlice } from '@reduxjs/toolkit';
+
+// Mã từ mã đầu tiên
+interface CartState {
+  cartCount: number;
+  cartId: number[];
+}
+
+const initialState: CartState = {
+  cartCount: 0,
+  cartId: [],
+};
+
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState,
+  reducers: {
+    incrementCart: (state, action) => {
+      state.cartCount += 1;
+      state.cartId.push(action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+    removeCart: (state, action) => {
+      state.cartCount -= 1;
+      state.cartId = state.cartId.filter((id) => id !== action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+  },
+});
+
+export const { incrementCart, removeCart } = cartSlice.actions;
+
+// Mã từ mã thứ hai
+interface LoginState {
+  isLoggedIn: boolean;
+}
+
+const loginInitialState: LoginState = {
+  isLoggedIn: false,
+};
+
+const loginSlice = createSlice({
+  name: 'login',
+  initialState: loginInitialState,
+  reducers: {
+    logIn: (state) => {
+      state.isLoggedIn = true;
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+    logOut: (state) => {
+      state.isLoggedIn = false;
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+  },
+});
+
+export const { logIn, logOut } = loginSlice.actions;
+
+// rootReducer
+const rootReducer = combineReducers({
+  cart: cartSlice.reducer,
+  login: loginSlice.reducer,
+});
+
+const storedStateString = localStorage.getItem('reduxState');
+const storedState: { cart: CartState; login: LoginState } | undefined = storedStateString
+  ? JSON.parse(storedStateString)
+  : undefined;
+
+const store = configureStore({
+  reducer: rootReducer,
+  preloadedState: storedState,
+});
+
+export default store;

@@ -4,6 +4,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import coursesData from "../layout-body/category.json"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import {removeCart} from "../redux/add"
 
 
 interface Course {
@@ -28,7 +29,7 @@ interface Course {
     }, [cartId]);
   
     const handleRemoveFromCart = (productId: number) => {
-      dispatch({ type: 'REMOVE_CART', payload: { productId: productId } });
+        dispatch(removeCart({ productId: productId }));
       setShowAlert(true);
       setTimeout(() => {
         setShowAlert(false);

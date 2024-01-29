@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './header.scss';
 import { FaAlignJustify } from "react-icons/fa";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { register, login } from "../services/UserService"
+import 'react-toastify/dist/ReactToastify.css';
 
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -9,6 +11,10 @@ function Header() {
   //login and logout
   const [modalLogin, setModalLogin] = useState(false);
   const [modalLogout, setModalLogout] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const accessToken = localStorage.getItem('accessToken');
 
   const toggleModalLogin = () =>{
     setModalLogin(!modalLogin)
@@ -37,6 +43,50 @@ function Header() {
   };
   const cartCount = useSelector((state: { cartCount: number }) => state.cartCount);
   // const cartId = useSelector(state => state.cartId);
+
+  const handleRegistration = async () => {
+    if ( !username || !password ) {
+      alert("Username/Password is required!");
+      return;
+    }
+    const response = await register(username, password);
+    const data = response.data; 
+
+    if (data.success) {
+      alert("User created successfully!");
+    } else {
+      if (data.message === "Missing Username or PassWord") {
+        alert("Missing Username or Password!");
+      } else if (data.message === "Username is existing") {
+        alert("Username is already taken. Please choose another username.");
+      } else {
+        alert("An error occurred. Please try again later.");
+      }
+    }
+  };
+
+  const handleLogin = async () => {
+    if (!username || !password) {
+      alert("Username/Password is require!")
+      return;
+    }
+
+    const response = await login(username, password);
+    const data = response.data;
+    if (data.success){
+      alert("Login Successfully");
+    }else{
+      if (data.message === "Incorrect User"){
+        alert("Incorrect User");
+      } else if(data.message === "Incorrect Password"){
+        alert("Incorrect Password");
+      } else {
+        alert("An error occurred. Please try again later.");
+      }
+    }
+    
+  }
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,8 +160,18 @@ function Header() {
               <div className="ba-coc">
               <FaAlignJustify />
               </div>
-            <button className="login" onClick={() => toggleModalLogin()}>Đăng nhập</button>
-            <button className="register" onClick={() => toggleModalLogout()}>Đăng ký</button>
+
+            {accessToken ? (
+              <div className='loginSuccess'>
+                <a href="/infor"><span>N</span></a>
+              </div>
+            ):( 
+              <div>
+              <button className="login" onClick={() => toggleModalLogin()}>Đăng nhập</button>
+              <button className="register" onClick={() => toggleModalLogout()}>Đăng ký</button>
+            </div>
+            )} 
+              
           </div>
         </div>
       { modalLogin &&(
@@ -128,7 +188,13 @@ function Header() {
                   <div className="input-item">
                     <div>
                         <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Faccount.png&w=64&q=75" className="arnh"></img>
-                      <input type="text" placeholder="Tài khoản đăng nhập" className='custom-input'></input>
+                        <input
+                          type="text"
+                          placeholder="Tài khoản đăng nhập"
+                          className="custom-input"
+                          value={username}
+                          onChange={(e) => setUsername(e.target.value)}
+                        ></input>
                     </div>
                   </div>
                 </div>
@@ -138,7 +204,13 @@ function Header() {
                       <span>
                         <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Fpassword.png&w=64&q=75"></img>
                       </span>
-                      <input type="text" placeholder="Mật khẩu đăng nhập" className='custom-input'></input>
+                      <input
+                          type="text"
+                          placeholder="Mật khẩu đăng nhập"
+                          className="custom-input1"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                        ></input>
                     </div>
                   </div>
                 </div>
@@ -146,7 +218,7 @@ function Header() {
                   <span>Quên mật khẩu</span>
                 </div>
                 <div className="other-login">
-                  <button className='Login'>Đăng Nhập</button>
+                  <button className='Login' onClick={handleLogin}>Đăng Nhập</button>
                   <div>
                     <span className="or">Hoặc</span>
                   </div>
@@ -178,47 +250,32 @@ function Header() {
                     <div className="input-item">
                       <div>
                           <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Faccount.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Tài khoản đăng nhập" className='custom-input1'></input>
+                          <input
+                            type="text"
+                            placeholder="Tài khoản đăng nhập"
+                            className="custom-input1"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                          ></input>
                       </div>
                     </div>
                     <div className="input-item">
                       <div>
                           <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Fpassword.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Mật khẩu đăng nhập" className='custom-input1'></input>
+                          <input
+                            type="text"
+                            placeholder="Mật khẩu đăng nhập"
+                            className="custom-input1"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                          ></input>
                       </div>
                     </div>
-                    <div className="input-item">
-                      <div>
-                          <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Fpassword.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Nhập lại mật khẩu" className='custom-input1'></input>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="auth-name2">
-                    <h4>2. Thông tin cá nhân</h4>
-                    <div className="input-item">
-                      <div>
-                          <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Faccount.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Họ và tên" className='custom-input1'></input>
-                      </div>
-                    </div>
-                    <div className="input-item">
-                      <div>
-                          <img src="https://onthisinhvien.com/_next/image?url=%2Fimages%2Fapp%2Faccount.png&w=64&q=75" className="arnh"></img>
-                        <input type="text" placeholder="Email" className='custom-input1'></input>
-                      </div>
-                    </div>
-                    <div className="input-item">
-                      <div>
-                          <img src="https://onthisinhvien.com/images/icon/phone-icon.svg" className="arnh"></img>
-                        <input type="text" placeholder="Số điện thoại" className='custom-input1'></input>
-                      </div>
-                    </div>
-                  </div>
+                    
+                  </div>   
                 </div>
                 <div className="other-login">
-                  <button className='Login'>Đăng ký</button>
+                  <button className='Login' onClick={handleRegistration}>Đăng ký</button>
                   <div>
                     <span className="or">Hoặc</span>
                   </div>

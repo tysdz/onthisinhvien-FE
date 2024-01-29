@@ -107,6 +107,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.scss", "src/index.tsx", "src/App.test.js"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.scss", "src/index.tsx", "src/App.test.js", "src/redux/auth.tsx"],
   "exclude": ["node_modules"]
 }

@@ -71,66 +71,43 @@
 
 
 /////////////////// chỉnh sửa từ js sang ts /////////////////////////
-import { createStore } from 'redux';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 interface CartState {
   cartCount: number;
   cartId: number[];
 }
 
-interface IncrementCart {
-  type: 'INCREMENT_CART';
-  payload: {
-    productId: number;
-  };
-}
-
-interface RemoveCart {
-  type: 'REMOVE_CART';
-  payload: {
-    productId: number;
-  };
-}
-
-type CartAction = IncrementCart | RemoveCart;
-
 const initialState: CartState = {
   cartCount: 0,
   cartId: [],
 };
 
-const cartReducer = (state: CartState = initialState, action: CartAction): CartState => {
-  switch (action.type) {
-    case 'INCREMENT_CART':
-      const newState: CartState = {
-        ...state,
-        cartCount: state.cartCount + 1,
-        cartId: [...state.cartId, action.payload.productId],
-      };
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState,
+  reducers: {
+    incrementCart: (state, action) => {
+      state.cartCount += 1;
+      state.cartId.push(action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+    removeCart: (state, action) => {
+      state.cartCount -= 1;
+      state.cartId = state.cartId.filter((id) => id !== action.payload.productId);
+      localStorage.setItem('reduxState', JSON.stringify(state));
+    },
+  },
+});
 
-      localStorage.setItem('reduxState', JSON.stringify(newState));
-
-      return newState;
-
-    case 'REMOVE_CART':
-      const updatedState: CartState = {
-        ...state,
-        cartCount: state.cartCount - 1,
-        cartId: state.cartId.filter((id) => id !== action.payload.productId),
-      };
-
-      localStorage.setItem('reduxState', JSON.stringify(updatedState));
-
-      return updatedState;
-
-    default:
-      return state;
-  }
-};
+export const { incrementCart, removeCart } = cartSlice.actions;
 
 const storedStateString = localStorage.getItem('reduxState');
 const storedState: CartState | undefined = storedStateString ? JSON.parse(storedStateString) : undefined;
 
-const store = createStore(cartReducer, storedState);
+const store = configureStore({
+  reducer: cartSlice.reducer,
+  preloadedState: storedState,
+});
 
 export default store;
